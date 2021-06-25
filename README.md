@@ -1,5 +1,9 @@
 A collection of useful blender scripts and addons that I've made for blender 2.8+
 
+## Addons
+
+- **copy-uvs-addon**: Copy the UV and seam information between identical meshes. Useful for syncing UVs between duplicated objects that are no longer linked.
+
 # Installing Addons
 
 1. `Edit > Preferences > Add-ons`
