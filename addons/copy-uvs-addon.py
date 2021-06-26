@@ -50,7 +50,7 @@ def copy_uvs(self, context):
 class OBJECT_OT_copy_uvs(Operator, AddObjectHelper):
     """Copy the UVs of the object to another"""
     bl_idname = "mesh.copy_uvs"
-    bl_label = "Copy UVs"
+    bl_label = "Copy UVs and Seams"
     bl_options = {'REGISTER', 'UNDO'}
 
     def execute(self, context):
