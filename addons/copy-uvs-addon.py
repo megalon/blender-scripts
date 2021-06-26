@@ -1,7 +1,7 @@
 bl_info = {
     "name": "Copy UVs",
     "author": "@megalon2d",
-    "version": (1, 0),
+    "version": (1, 1),
     "blender": (2, 90, 0),
     "location": "View3D > Object > Copy UVs",
     "description": "Copy uv and seam info between identical meshes",
@@ -29,14 +29,14 @@ def copy_uvs(self, context):
                 
                 # Loop this indice refers to
                 loop = obj.data.loops[i]
-                print("Loop index", loop.index, "points to vertex index", loop.vertex_index)
+                # print("Loop index", loop.index, "points to vertex index", loop.vertex_index)
                 
                 # Get UV layers for active and current
                 active_ul = active.data.uv_layers[0]
                 current_ul = obj.data.uv_layers[0]
                 
                 current_ul.data[loop.index].uv = active_ul.data[loop.index].uv
-                print("  UV Map has coordinates", current_ul.data[loop.index].uv, "for this loop index")
+                # print("  UV Map has coordinates", current_ul.data[loop.index].uv, "for this loop index")
                 
         # Copy seams
         for active_edge_index in range(len(active.data.edges)):
