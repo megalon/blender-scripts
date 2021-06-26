@@ -22,6 +22,10 @@ def copy_uvs(self, context):
     selected = bpy.context.selected_objects
     active = bpy.context.active_object
     for obj in selected:
+        # Skip active object
+        if obj == active:
+            continue
+            
         # Loop through all polys in active obj
         for active_poly_index in range(len(active.data.polygons)):
             # Get loop indices from current obj
